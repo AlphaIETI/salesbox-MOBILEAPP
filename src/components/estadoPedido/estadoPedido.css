@@ -1,0 +1,55 @@
+.layout {
+
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.paper {
+
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.ImagePedido{
+    width: 20%;
+    height: 82%;
+    padding: 1em;
+
+}
+
+.avatar {
+
+    margin: 10px;
+    background: floralwhite;
+
+}
+
+.form {
+
+    width: 100%;
+    margin-top: 30px;
+
+}
+
+.submit {
+
+    margintop: 20px;
+
+}
+
+.margin-bar{
+
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}

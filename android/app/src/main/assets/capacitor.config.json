@@ -1,0 +1,8 @@
+{
+  "appId": "io.ionic.salesboxMobileApp",
+  "appName": "salesboxMobileApp",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "cordova": {}
+}

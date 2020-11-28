@@ -1,0 +1,13 @@
+{
+  "name": "salesboxMobileApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "proxies": [
+    {
+       "path": "/clients/email/",
+       "proxyUrl": "https://salesbox-alpha.herokuapp.com/"
+    }
+  ]
+}

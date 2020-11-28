@@ -1,0 +1,85 @@
+
+.avatar {
+
+    width: 60px;
+    height : 40px ;
+    max-width: 100px;
+    max-height: 100px;
+
+}
+
+.imagen{
+
+    color: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+    text-indent: 1000px;
+
+}
+.imagenacordion{
+
+    color: black;
+    background-color: #272C2A ;
+
+}
+
+.container{
+
+    background-color: #272C2A;
+    color: white;
+    border-bottom: solid 1px #ccc;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+.container .subcontainer{
+
+    width: 800px;
+    margin: 0 auto;
+
+}
+.container .subcontainer div{
+
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.logo{
+
+    color: #fff;
+    font-weight: bolder;
+    font-size: 22px;
+    width: 100px;
+
+}
+
+.acordion-descrip{
+    width: calc(500px - 20px - 10px);
+    padding: 10px;
+    font-size: 16px;
+}
+.accordion{
+    width: 150px;
+}
+
+.imagen{
+
+    margin: 0;
+    list-style: none;
+
+}
+.new-typ-es{
+    display: inline;
+    padding: 10px;
+}
+
+.new-div-lef{
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}

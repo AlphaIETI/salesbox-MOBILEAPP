@@ -1,0 +1,205 @@
+
+.Appj {
+  text-align: center;
+
+
+}
+
+
+body { 
+	background-image: linear-gradient(to right top, #ffffff,#ffffff,#ffffff);
+  }
+
+p{
+ font-size:0pt;
+}
+
+.App-logoj {
+  height: 28vmin;
+  pointer-events: none;
+}
+
+.textbox-dgj
+{
+    height:30px;
+    width :270px;
+    font-size:10pt;
+    background: #FFFAF0 ;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid ;
+    /* box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03), inset 14px 14px 70px rgb(0,0,0,0.2), inset -15px -15px 30px rgba(255,255,255, 0.04); */
+    box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03);
+    border-width: 1px 0px 0 1px;
+    margin-top: 15px;
+}
+
+
+
+.form-controlj:focus
+{
+
+    border: 1px solid #344d2e;
+    color: #495057;
+    outline: 0;
+    background: #FFFAF0;
+    border-radius: 10px;
+    box-shadow: 10px 10px 36px rgb(0,0,0,0.5), -13px -13px 23px rgba(255,255,255, 0.03);
+}
+.centerj{
+ text-align: center;
+ position: relative;
+ top: -80px}
+
+ .myButton2 {
+	box-shadow: 3px 4px 0px 0px #D1B76C;
+	background:linear-gradient(to bottom, #D1B76C 5%, #D1B76C 100%);
+	background-color:#D1B76C;
+	border-radius:27px;
+	border:3px solid #D1B76C;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #D1B76C;
+}
+.myButton2:hover {
+	background:linear-gradient(to bottom, #D1B76C 5%, #D1B76C 100%);
+	background-color:#D1B76C;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.myButtonj {
+	box-shadow:inset 0px 0px 14px -3px #f2fadc;
+	background:linear-gradient(to bottom, #dbe6c4 5%, #7f857b 100%);
+	background-color:#dbe6c4;
+	border-radius:6px;
+	border:1px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#757d6f;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+.myButtonj:hover {
+	background:linear-gradient(to bottom, #7f857b 5%, #dbe6c4 100%);
+	background-color:#7f857b;
+}
+.myButtonj:active {
+	position:relative;
+	top:1px;
+}
+
+.underlineHoverj:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHoverj:hover {
+  color: #56baed;
+}
+
+.underlineHoverj:hover:after{
+  width: 100%;
+}
+
+Link {
+  color: grey;
+  display:inline-block;
+  text-decoration: none;
+  font-size: 20px;
+}
+.izqj{
+  font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+}
+.social{
+   background: #ffffff;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	position:relative;
+	top:90px;
+}
+.social a{
+	display: inline-block;
+	padding: 6px;
+	position:relative;
+	top:-3px;
+
+
+}
+.social a i{
+	color: #92a8d1;
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+    line-height: 50px!important;
+    border: 3px solid #fff;
+	opacity: .8;
+transition-property: transform;
+    -moz-transition-property: -moz-transform;
+    -webkit-transition-property: -webkit-transform;
+    transition: all 0.6s cubic-bezier(0.88, -0.48, 0.38, 1.85);
+	border-radius: 50%;
+
+	}
+.social a i:hover{
+	opacity: 1;
+	border-radius: 20%;
+
+}
+.social a:hover i.fa-linkedin-in,.social a:hover i.fa-telegram-plane{
+	transition:  .6s ease-in;
+	background: #0088cc;
+	color: white;
+	border: 3px solid #00aaff;
+
+transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+.social a:hover i.fa-at{
+	transition:  .6s ease-in;
+	background: #D44638;
+	color:white;
+	border: 3px solid #fd8e8e;
+	transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+.social a:hover i.fa-instagram{
+	transition:  .6s ease-in;
+	background: linear-gradient(#F58529 20%, #FEDA77 50%, #DD2A7B 75%, #8134AF 90%, #515BD4)
+;
+	transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+	border: 3px solid #fd8e8e;
+	color:white;
+
+}
+
+.App-headerj {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+

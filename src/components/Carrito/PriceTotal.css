@@ -1,0 +1,22 @@
+
+
+.division{
+    display: flex;
+    align-items: center; /* Use another value to see the result */
+    width: 100%;
+    height:20%;
+}
+
+.leftColumn{
+    display: flex;
+    align-items: center; /* Use another value to see the result */
+    width: 80%;
+    height: 20%;
+}
+
+.rightColumn{
+    display: flex;
+    align-items: center; /* Use another value to see the result */
+    width: 20%;
+    height: 20%;
+}

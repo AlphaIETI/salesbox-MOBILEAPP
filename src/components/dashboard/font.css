@@ -1,0 +1,83 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Manuale&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Condensed&display=swap');
+
+.descProd {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size:2em;
+    color:black;
+}
+
+.descProd2 {
+    font-family: 'Manuale', serif;
+    font-size:2em;
+    color:black;
+}
+
+.descProd3 {
+    font-family: 'Aleo', serif;
+    font-size:2em;
+    color:black;
+}
+
+.descProd4 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size:2em;
+    color:black;
+}
+.descProd5 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:2em;
+    color:black;
+}
+.descProd6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size:2em;
+    color:black;
+}
+.precioOrigi {
+    font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+    color: #767677;
+    text-decoration: line-through;
+    font-weight: 500;
+}
+.precioTotal {
+    font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+    color: #e32b2b;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.porDescuento {
+    font-size: 12px;
+    max-width: 90%;
+    text-align: center;
+    text-transform: uppercase;
+    transform-origin: right top;
+    white-space: nowrap;
+    background-color: #fff;
+    color: #e32b2b;
+    font-weight: 700;
+    float: right;
+}
+.nombreMarca {
+    line-height: 38px;
+    letter-spacing: 1.5px;
+    color: black;
+}
+.descriptionText {
+    font-family: AdihausDIN,Helvetica,Arial,sans-serif;
+    color: #767677;
+    font-weight: 500;
+}
+.centerText {
+    margin: auto;
+    width: 60%;
+    padding: 10px;   
+}
