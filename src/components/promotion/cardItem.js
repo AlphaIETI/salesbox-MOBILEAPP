@@ -5,13 +5,13 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mater
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 345,
-    minWidth: 345,
-    maxHeight: 420,
-    minHeight: 420,
+    maxWidth: 200,
+    minWidth: 200,
+    maxHeight: 300,
+    minHeight: 300,
   },
   media: {
-    height: 300
+    height: 120
   }
 }));
 export default function CardItem (props) {
