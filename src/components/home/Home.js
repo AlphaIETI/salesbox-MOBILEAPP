@@ -284,7 +284,7 @@ export default function ButtonBases() {
                  </div>
               <br></br><br></br><br></br>
               <Typography variant="h4" align="center" style={{color:"black" , fontFamily: "Fantasy"}} >
-                   Marcas Destacadas
+                   Publicidades Destacadas
                   </Typography>
               <CarouselComponent promotions={promotions} type={"Entity"} className={classes.container}/>
               <br></br><br></br><br></br>
