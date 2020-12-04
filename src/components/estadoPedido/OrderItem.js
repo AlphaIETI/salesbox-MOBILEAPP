@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import {CardImg, CardBody,CardTitle, CardSubtitle} from 'reactstrap';
+import {CardImg, CardBody, CardTitle, CardSubtitle, Card} from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
 import axios from 'axios';
+import Typography from "@material-ui/core/Typography";
 
 
 export default function Item(props){
@@ -47,6 +48,8 @@ export default function Item(props){
 
     return(
         <Container style={{background:'white'}}>
+            <h3> Pedido</h3>
+            <h4> 00001 </h4>
             <Row>
                 <Col >
                     <CardImg style={imageItem} src={itemData.images[0]} alt="Missing Pic"/>
@@ -60,7 +63,7 @@ export default function Item(props){
                 <Col style={imageItem}>
                     <CardBody>
                         <CardTitle></CardTitle>
-                        <CardSubtitle style={textStyle}>${itemData.price}</CardSubtitle>
+                        <CardSubtitle style={textStyle}>${(itemData.price-(itemData.price*(itemData.discount/100)))}</CardSubtitle>
                     </CardBody>
                 </Col>
             </Row>

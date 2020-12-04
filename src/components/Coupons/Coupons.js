@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Container } from '@material-ui/core';
-import GeneralAppBar from '../Carrito/GeneralAppBar';
+import GeneralAppBar from '../dashboard/appBar';
 import CouponsList from './CouponsList.js';
 
 

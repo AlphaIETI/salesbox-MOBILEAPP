@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import GeneralAppBar from "../Carrito/GeneralAppBar";
+import AppBarComponent from '../dashboard/appBar';
 import Divider from '@material-ui/core/Divider';
 import FavoriteList from './FavoriteList.js';
 import axios from 'axios';
@@ -48,7 +48,7 @@ export default function Favorites(){
     return(
         <React.Fragment>
             <CssBaseline />
-            <GeneralAppBar/>
+            <AppBarComponent />
             <br/>
             <br/>
             <br/>

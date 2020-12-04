@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "./PriceTotal.css";
 
 import CardContent from "@material-ui/core/CardContent";
@@ -47,10 +47,10 @@ export default function PriceTotal(props){
 
 
     const classes = useStyles();
-    
+
     const generateCoupon =  async()  => {
         let user = {};
-        
+
 
         await axios.get('https://salesbox-alpha-backend.herokuapp.com/clients/email/'+localStorage.getItem('emailClient'))
 			.then(res => {
@@ -77,6 +77,8 @@ export default function PriceTotal(props){
             brand: JSON.parse(localStorage.getItem('client')).id.toString()
         }
 
+
+
         fetch('https://salesbox-alpha-backend.herokuapp.com/api/coupons', { 
             method:'POST',
             headers:{
@@ -97,7 +99,9 @@ export default function PriceTotal(props){
                 console.log('Hubo un problema con la petición Fetch:' + error.message);
             });
 
-
+        //Se Genera la orden de compra.
+        generateOrder()
+    
         const newUser = {
             id: user.id,
             name: user.name,
@@ -112,27 +116,129 @@ export default function PriceTotal(props){
             sizeDown:user.sizeDown,
             shoeSize:user.shoeSize,
             cart: user.cart,
-            favorites: user.favorites
+            favorites: user.favorites,
+            orders:user.orders
         }
 
-        fetch('https://salesbox-alpha-backend.herokuapp.com/clients', { 
+        fetch('https://salesbox-alpha-backend.herokuapp.com/clients', {
             method:'PUT',
             headers:{
                 'Content-Type': 'application/json ',
                 'Accept': 'application/json',
-              },
+            },
             body:JSON.stringify(newUser),
-          }).then(function(response) {
-              
-                if(response.ok){
-                    response.json().then(function(res) {
-                        console.log(res);
+        }).then(function(response) {
+
+            if(response.ok){
+                response.json().then(function(res) {
+                    //console.log(res);
+                })
+            }else{
+                console.log('Respuesta de red OK pero respuesta HTTP no OK');
+            }
+        }).catch(function(error) {
+            console.log('Hubo un problema con la petición Fetch:' + error.message);
+        });
+    }
+
+    const [mapProductBrand, setMapProductBrand] = useState({});
+    const [user,setUser] = useState();
+    useEffect (() => {
+        async function fetchData() {
+            await axios.get('https://salesbox-alpha-backend.herokuapp.com/clients/email/'+localStorage.getItem('emailClient'))
+			.then(res => {
+                let user = res.data
+                setUser(res.data)
+                user.cart.map(async item=>{
+                    await fetch('https://salesbox-alpha-backend.herokuapp.com/products/'+item, {
+                        method: 'GET'
+                    }).then(response => response.json())
+                        .then(data => {
+                            if(data.brand in mapProductBrand){
+                                let idsProducts = mapProductBrand[data.brand]
+                                idsProducts.push(data.id)
+                                mapProductBrand[data.brand] = idsProducts
+                            }else{
+                                mapProductBrand[data.brand] = [data.id]
+                            }
+                        }).catch(error => {
+                            console.log(error)
+                        });
+                })
+				})
+          }
+          fetchData();
+        },[mapProductBrand]);
+
+    const generateOrder = () =>{
+        for(let br in mapProductBrand){
+            let order = {id: "", nameEntity:br, idProducts:mapProductBrand[br], idClient:user.id, quantity:"1"}
+            fetch('https://salesbox-alpha-backend.herokuapp.com/addOrder', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 'Accept': 'application/json',
+                },
+                body: JSON.stringify(order)
+            }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (res) {
+                        addOrderUserAndEntity(res.id,res.nameEntity)
                     })
-                }else{
-                    console.log('Respuesta de red OK pero respuesta HTTP no OK');
+                } else {
+                    console.log("")
                 }
-            }).catch(function(error) {
-                console.log('Hubo un problema con la petición Fetch:' + error.message);
+            }).catch(function (error) {
+                console.log("Bad petition:" + error.message);
+            });
+        }   
+    }
+
+    const addOrderUserAndEntity = (id,nameEntity) => {
+        let ordersU = user.orders
+        ordersU.push(id)
+        fetch('https://salesbox-alpha-backend.herokuapp.com/clients', {
+            method:'PUT',
+            headers:{
+                'Content-Type': 'application/json ',
+                'Accept': 'application/json',
+            },
+            body:JSON.stringify(user),
+        }).then(function(response) {
+            if(response.ok){
+                response.json().then(function(res) {
+                })
+            }else{
+                console.log('Respuesta de red OK pero respuesta HTTP no OK');
+            }
+        }).catch(function(error) {
+            console.log('Hubo un problema con la petición Fetch:' + error.message);
+        });
+
+        fetch('https://salesbox-alpha-backend.herokuapp.com/api/entity/name/'+nameEntity, {
+            method: 'GET'
+        }).then(response => response.json())
+            .then(data => {
+                let ordersE = data.orders
+                ordersE.push(id)
+                fetch('https://salesbox-alpha-backend.herokuapp.com/api/entities', { 
+                    method:'PUT',
+                    headers:{
+                        'Content-Type': 'application/json ',
+                        'Accept': 'application/json',
+                    },
+                    body:JSON.stringify(data),
+                }).then(function(response) {
+                        if(response.ok){
+                            response.json().then(function(res) {
+                            })
+                        }else{
+                            console.log('Respuesta de red OK pero respuesta HTTP no OK');
+                        }
+                    }).catch(function(error) {
+                        console.log('Hubo un problema con la petición Fetch:' + error.message);
+                    });
+            }).catch(error => {
+                console.log(error)
             });
     }
 

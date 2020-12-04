@@ -177,6 +177,9 @@ export default function AccordionComponent(props) {
     };
     const handleChange6 = (event) => {
         setState({ ...state, [event.target.name]: event.target.checked });
+        if(event.target.checked){
+            console.log(JSON.parse(localStorage.getItem('client')))
+        }
     };
     const handleChange7 = (panel) => (event, newExpanded) => {
         setExpanded7(newExpanded ? panel : false);
@@ -386,7 +389,7 @@ export default function AccordionComponent(props) {
                     </AccordionDetails>
                 </Accordion>
             <Divider />
-            {!localStorage.getItem('isAdmin') ?
+            {!localStorage.getItem('isAdmin') && localStorage.getItem('isLoggedIn') ?
             <div>  
                 <Accordion square expanded={expanded4 === 'panel1'} onChange={handleChange4('panel1')} className={classes.accordion}>
                     <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">

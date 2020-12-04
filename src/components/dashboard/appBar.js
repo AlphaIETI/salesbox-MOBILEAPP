@@ -106,14 +106,21 @@ export default function AppBarComponent(props) {
     };
 
     const [user, setUser] = React.useState({fav:0,car:0,tran:0,coup:0});
+    const [entity, setEntity] = React.useState({tran:0,publ:0})
     useEffect( () => {
         if(localStorage.getItem('emailClient') !== null){
             axios.get('https://salesbox-alpha-backend.herokuapp.com/clients/email/'+localStorage.getItem('emailClient'))
 			.then(res => {
-                setUser({fav:res.data.favorites.length,car:res.data.cart.length,tran:0,coup:0})
+                setUser({fav:res.data.favorites.length,car:res.data.cart.length,tran:res.data.orders.length,coup:res.data.coupons.length})
 				})
             }
-        }, [user]);
+        if(localStorage.getItem('nameEntity') !== null){
+            axios.get('https://salesbox-alpha-backend.herokuapp.com/api/entity/name/'+localStorage.getItem('nameEntity'))
+			.then(res => {
+                setEntity({tran:res.data.orders.length,publ:res.data.publicity})
+				})
+            }
+        }, [user,entity]);
         
     return (
         <div>
@@ -187,7 +194,7 @@ export default function AppBarComponent(props) {
             {localStorage.getItem('isAdmin') ?
                 <Link to="/EstadoPedido">
                     <IconButton aria-label="cart">
-                        <Badge badgeContent={2} color="secondary">
+                        <Badge badgeContent={entity.tran} color="secondary">
                             <AssignmentOutlinedIcon  fontSize="medium"className={classes.colorIcons}/>
                         </Badge>
                     </IconButton>
@@ -201,7 +208,7 @@ export default function AppBarComponent(props) {
                 null
             }
             {localStorage.getItem('isAdmin') ?
-                <AddPromotion fontSize="medium" cantPromo={props.cantPromo} />
+                <AddPromotion fontSize="medium" cantPromo={entity.publ} />
                 :
                 null
             }
