@@ -34,7 +34,6 @@ export default function Colors(props) {
         <div className="colors">
             {
             colors.map((color, index) =>(
-                console.log(trColor(color)),
                 <button style={{background: trColor(color)}} key={index}></button>
 
             ))

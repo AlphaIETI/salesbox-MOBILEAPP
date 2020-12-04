@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import CardList from "./CardList";
-import GeneralAppBar from "./GeneralAppBar";
+import GeneralAppBar from '../dashboard/appBar';
 import Divider from '@material-ui/core/Divider';
 import PriceTotal from './PriceTotal';
 import axios from 'axios';

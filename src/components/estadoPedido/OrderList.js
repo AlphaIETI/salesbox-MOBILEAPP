@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Card } from 'reactstrap';
 import OrderItem from './OrderItem.js';
@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import {makeStyles} from "@material-ui/core/styles";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -71,12 +72,27 @@ export default function OrderList(props){
     const handleReset = () => {
         setActiveStep(0);
     };
+    const [order,setOrder]=useState(
+        {"id":"",
+            "idProducts":[],
+            "idEntity":"",
+            "idClient":"",
+            "quantity":""
+        }
+    );
+    const getOrders =  () => {
+        axios.get('https://salesbox-alpha-backend.herokuapp.com/orders/id/'+props.currentItem)
+            .then(res => {
+                setOrder(res.data);
+            })
+    };
     return(
         <div>
             <Card>
-                <h3> Pedido</h3>
-                <h5> 00001 </h5>
-                <OrderItem currentItem={props.currentItem}/>
+                {getOrders()}
+                {order.idProducts.map(item =>{
+                    return <OrderItem currentItem={item} key ={item}/>
+                })}
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         <div className={classes.root}>

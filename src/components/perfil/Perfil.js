@@ -9,9 +9,12 @@ import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Grid from "@material-ui/core/Grid";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Button from '@material-ui/core/Button';
-
+import { Link } from 'react-router-dom';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+import IconButton from '@material-ui/core/IconButton';
 
 export default function Perfil (props){
+
 
 	const useStyles = makeStyles((theme) => ({
 		root: {
@@ -119,14 +122,20 @@ export default function Perfil (props){
 								</Typography>
 
 								<br/>
+								<Link  underline="none" to="/EstadoPedido">
+									<Typography align={"center"} variant="h5" className={classes.white}>
+										Mis pedidos 
+									</Typography>
+								</Link>
+								
+								<Link  underline="none" to="/Coupons">
+									<Typography align={"center"} variant="h5" className={classes.white}>
+										Mis cupones: {JSON.parse(localStorage.getItem('client')).coupons.length}
+									</Typography>
+								</Link>
+								
 
-								<Typography align={"center"} variant="h5"className={classes.white}>
-								Mis Cupones:
-								</Typography>
-
-								<Typography align={"center"} variant="h5" className={classes.white}>
-								{JSON.parse(localStorage.getItem('client')).coupons.length}
-								</Typography>
+								
 
 								<br/>
 								<br/>
@@ -164,11 +173,22 @@ export default function Perfil (props){
 									{JSON.parse(localStorage.getItem('entity')).email.toString()}
 								</Typography>
 
-						
+
 
 								<br/>
+
+								<Link  underline="none" to="/EstadoPedido">
+									<Typography align={"center"} variant="h5" className={classes.white}>
+										Mis pedidos 
+									</Typography>
+								</Link>
 								
 								<br/>
+								
+								<Typography align={"center"} variant="h6" className={classes.white}>
+									Mis promociones: {JSON.parse(localStorage.getItem('entity')).publicity.toString()}
+								</Typography>
+								
 								
 								<br/>
 								
