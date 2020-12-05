@@ -9,6 +9,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import {Divider} from "@material-ui/core";
 import PaymentIcon from '@material-ui/icons/Payment';
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 
 
@@ -49,6 +50,14 @@ export default function PriceTotal(props){
     const classes = useStyles();
 
     const generateCoupon =  async()  => {
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Compra exitosa!',
+            showConfirmButton: false,
+            timer: 2000
+          })
+
         let user = {};
 
 
@@ -56,21 +65,6 @@ export default function PriceTotal(props){
 			.then(res => {
 				user = res.data
 				})
-
-        /* let itemRepetido = false;
-        user.cart.map(item => {
-            if(item === props.idProduct){
-                itemRepetido = true;
-            }
-        });
-        if(!itemRepetido){
-            user.cart.push(props.idProduct);
-        } */
-
-        /* console.log(props.marca);
-        console.log(JSON.parse(localStorage.getItem('client')).id.toString()); */
-
-        //user.coupons.push('0004');
 
         const info = {
             id: props.marca,
@@ -102,43 +96,6 @@ export default function PriceTotal(props){
         //Se Genera la orden de compra.
         generateOrder()
     
-        const newUser = {
-            id: user.id,
-            name: user.name,
-            lastname: user.lastname,
-            email: user.email,
-            password: user.password,
-            coupons: user.coupons,
-            phone: user.phone,
-            address: user.address,
-            age:user.age,
-            sizeUp: user.sizeUp,
-            sizeDown:user.sizeDown,
-            shoeSize:user.shoeSize,
-            cart: user.cart,
-            favorites: user.favorites,
-            orders:user.orders
-        }
-
-        fetch('https://salesbox-alpha-backend.herokuapp.com/clients', {
-            method:'PUT',
-            headers:{
-                'Content-Type': 'application/json ',
-                'Accept': 'application/json',
-            },
-            body:JSON.stringify(newUser),
-        }).then(function(response) {
-
-            if(response.ok){
-                response.json().then(function(res) {
-                    //console.log(res);
-                })
-            }else{
-                console.log('Respuesta de red OK pero respuesta HTTP no OK');
-            }
-        }).catch(function(error) {
-            console.log('Hubo un problema con la petición Fetch:' + error.message);
-        });
     }
 
     const [mapProductBrand, setMapProductBrand] = useState({});
