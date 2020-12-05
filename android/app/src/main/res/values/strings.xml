@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">salesboxMobileApp</string>
-    <string name="title_activity_main">salesboxMobileApp</string>
+    <string name="app_name">SalesBox</string>
+    <string name="title_activity_main">SalesBox</string>
     <string name="package_name">io.ionic.salesboxMobileApp</string>
     <string name="custom_url_scheme">io.ionic.salesboxMobileApp</string>
 </resources>
