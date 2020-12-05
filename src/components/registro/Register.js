@@ -417,8 +417,8 @@ const handleFileImg = (e) => {
   return (
 
 
-    <div align="center"className={classes.root} style={{ width: '480px', margin: '0 auto' }}>
-      <AppBar position="static" style={{ width: '480px', margin: '0 auto', background: '#D1B76C' }}>
+    <div align="center"className={classes.root} >
+      <AppBar position="static" style={{ background: '#D1B76C' }}>
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" >
         <Tab style={{width:'50 auto'}} label={<span style={{ color: '#020202'  }}><FaceIcon></FaceIcon>Cliente</span>} {...a11yProps(0)} />
         <Tab label={<span style={{ color: '#020202' }}><HomeWorkIcon></HomeWorkIcon>Empresa</span>} {...a11yProps(1)} />
@@ -428,11 +428,11 @@ const handleFileImg = (e) => {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}  >
-        <img src={logo} style={{ height: '40px' }} />
-
+        <img src={logo} style={{ height: '30px' }} />
+        <br></br>
         <input
           id="nombreCliente"
-          style={{ width: '400px', margin: '0 auto' }}
+        
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Nombre"
@@ -443,11 +443,11 @@ const handleFileImg = (e) => {
         />
 
         <br />
-        <br />
+       
 
         <input
             id="apellidoCliente"
-            style={{ width: '400px', margin: '0 auto' }}
+          
             type="text"
             className="form-controlj textbox-dgj"
             placeholder="Apellido"
@@ -457,11 +457,11 @@ const handleFileImg = (e) => {
         />
 
         <br />
-        <br />
+      
 
         <input
           id="email"
-          style={{ width: '400px', margin: '0 auto' }}
+
           type="email"
           className="form-controlj textbox-dgj"
           placeholder="Email"
@@ -470,10 +470,10 @@ const handleFileImg = (e) => {
 
         />
         <br />
-        <br />
+      
         <input
           id="direccionCliente"
-          style={{ width: '400px', margin: '0 auto' }}
+      
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Dirección"
@@ -482,10 +482,10 @@ const handleFileImg = (e) => {
 
         />
         <br />
-        <br />
+    
         <input
           id="telefonoCliente"
-          style={{ width: '400px', margin: '0 auto' }}
+     
           type="number"
           className="form-controlj textbox-dgj"
           placeholder="Telefono"
@@ -493,10 +493,10 @@ const handleFileImg = (e) => {
 
         />
         <br />
-        <br />
+       
         <input
           id="fechaNacimiento"
-          style={{ width: '400px', margin: '0 auto' }}
+   
           type="date"
           className="form-controlj textbox-dgj"
           placeholder="Fecha de nacimiento"
@@ -504,11 +504,11 @@ const handleFileImg = (e) => {
 
         />
         <br />
-        <br />
+       
 
         <input
           id="contrasenaCliente"
-          style={{ width: '400px', margin: '0 auto' }}
+
           type="Password"
           className="form-controlj textbox-dgj"
           placeholder="Contraseña"
@@ -616,84 +616,84 @@ const handleFileImg = (e) => {
       <TabPanel value={value} index={1} >
 
 
-        <img src={logo} alt="logo" style={{ height: '40px'}} />
+        <img src={logo} alt="logo" style={{ height: '30px'}} />
 
-
+        <br></br>
 
         <input
           id="nombreEmpresa"
-          style={{ width: '400px', margin: '0 auto' }}
+      
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Nombre Empresa"
 
 
         />
-        <br />
+      
         <br />
         <input
           id="nit"
-          style={{ width: '400px', margin: '0 auto' }}
+        
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Nit"
 
 
         />
-        <br />
+      
         <br />
         <input
           id="emailEmpresa"
-          style={{ width: '400px', margin: '0 auto' }}
+    
           type="email"
           className="form-controlj textbox-dgj"
           placeholder="Email"
 
 
         />
-        <br />
+    
         <br />
         <input
           id="direccionEmpresa"
-          style={{ width: '400px', margin: '0 auto' }}
+        
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Dirección"
 
         />
-        <br />
+    
         <br />
 
         <input
           id="ciudadEmpresa"
-          style={{ width: '400px', margin: '0 auto' }}
+  
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Ciudad"
 
         />
-        <br />
+    
         <br />
 
         <input
           id="telefonoEmpresa"
-          style={{ width: '400px', margin: '0 auto' }}
+     
           type="text"
           className="form-controlj textbox-dgj"
           placeholder="Telefono"
 
         />
-        <br />
+    
         <br />
         <input
           id="contrasenaEmpresa"
-          style={{ width: '400px', margin: '0 auto' }}
+   
           type="Password"
           className="form-controlj textbox-dgj"
           placeholder="Contraseña"
 
         />
-        <br />
+        <br></br>
         <br />
         <div>
         <label htmlFor="upload-photo" >
@@ -716,7 +716,7 @@ const handleFileImg = (e) => {
     class="myButton2"
   >
     <CloudUploadIcon  /> 
-       . Selecciona la imagen(logo)
+   .       Logo
   </Fab>
   <br />
   <br />
@@ -732,7 +732,7 @@ const handleFileImg = (e) => {
 </label>
 </div>
 <br />
-  <br />
+ 
    
 
         <button class="myButton2" onClick={handleOnClick} style={{ position: 'relative' }}>

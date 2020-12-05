@@ -21,6 +21,7 @@ import PropTypes from 'prop-types';
 import FaceIcon from '@material-ui/icons/Face';
 import HomeWorkIcon from '@material-ui/icons/HomeWork';
 import { Redirect, Route } from 'react-router-dom';
+import logo from '../../logo.png';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -58,35 +59,11 @@ function a11yProps(index) {
 
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    height: '100vh',
-    display: 'flex',
-  },
-  image: {
-    backgroundImage: 'url(https://res.cloudinary.com/deavblstk/image/upload/v1606264763/aotiqnmk0aii199nnbnz.png)',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor:
-      theme.palette.type === 'light' ? theme.palette.grey[50] : theme.palette.grey[900],
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  form: {
-    width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(1),
-  },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-  },
+ 
+    root: {
+      flexGrow: 1,
+      backgroundColor: theme.palette.background.paper,
+    },
 }));
 
 export default function Login() {
@@ -109,6 +86,7 @@ export default function Login() {
     setIsLoggedIn(true);
     localStorage.setItem('isLoggedIn',true);
     window.location='/Home';
+    console.log(email)
   };
   
   const responseGoogleFalse = (response) =>{
@@ -215,13 +193,9 @@ export default function Login() {
   return (
   
    
-    <Grid container component="main" className={classes.root}>
-      <CssBaseline />
-      <Grid item xs={false} sm={4} md={7} className={classes.image} />
-      <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-        <div align="center" className={classes.paper}>
-    
-          <AppBar position="static" style={{ width: '380px', margin: '0 auto', background: '#D1B76C'}}>
+
+    <div align="center"className={classes.root} >    
+          <AppBar position="static" style={{ background: '#D1B76C'}}>
             <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" >
               <Tab style={{width:'50 auto'}} label={<span style={{ color: '#020202'  }}><FaceIcon></FaceIcon>Cliente</span>} {...a11yProps(0)} />
               <Tab label={<span style={{ color: '#020202' }}><HomeWorkIcon></HomeWorkIcon>Empresa</span>} {...a11yProps(1)} />
@@ -239,14 +213,13 @@ export default function Login() {
           }
 
       <TabPanel value={value} index={0}>
-            <br />
-            <br />
-            
+      <img src={logo} style={{ height: '40px' }} />
+      <br />  
         
       <Input
         position="static" 
         id="email"
-        style={{ height: '40px',width: '300px'}}
+      
         type="email"
         className="form-controlj textbox-dgj"
         placeholder="Email"
@@ -259,7 +232,7 @@ export default function Login() {
             <br />
       <Input
         id="contrasenaCliente"
-        style={{ height: '40px', width: '300px', margin: '0 auto' }}
+  
         type="Password"
         className="form-controlj textbox-dgj"
         placeholder="Contraseña"
@@ -293,12 +266,11 @@ export default function Login() {
     </TabPanel>
 
           <TabPanel value={value} index={1} >
-          <br />
-            <br />
-           
+          <img src={logo} style={{ height: '40px' }} />
+           <br></br>
             <Input
               id="emailEmpresa"
-              style={{  height: '40px',width: '300px', margin: '0 auto' }}
+       
               type="email"
               className="form-controlj textbox-dgj"
               placeholder="Email"
@@ -310,7 +282,7 @@ export default function Login() {
         
             <Input
               id="contrasenaEmpresa"
-              style={{  height: '40px', width: '300px', margin: '0 auto' }}
+           
               type="Password"
               className="form-controlj textbox-dgj"
               placeholder="Contraseña"
@@ -335,8 +307,8 @@ export default function Login() {
       
           </form>
         </div>
-      </Grid>
-    </Grid>
+     
+  
  
   );
 }
