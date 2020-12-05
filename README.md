@@ -7,50 +7,20 @@
 - Sergio Alejandro Nuñez
 - Sarah Camila Vieda
 
+![WhatsApp Image 2020-12-04 at 10 06 03 PM - Copy](https://user-images.githubusercontent.com/43153078/101232604-774a3d80-3680-11eb-9045-800b9e7950ed.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (3)](https://user-images.githubusercontent.com/43153078/101232593-75807a00-3680-11eb-9a3d-ce922fac3c92.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (4)](https://user-images.githubusercontent.com/43153078/101232594-75807a00-3680-11eb-9b37-2e9d0f8e0560.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (5)](https://user-images.githubusercontent.com/43153078/101232595-76191080-3680-11eb-99dc-c2128ad071f9.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 04 PM](https://user-images.githubusercontent.com/43153078/101232596-76191080-3680-11eb-8229-baf398e00647.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (6) - Copy](https://user-images.githubusercontent.com/43153078/101232597-76191080-3680-11eb-842f-15f4a71c28c3.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (7) - Copy](https://user-images.githubusercontent.com/43153078/101232598-76b1a700-3680-11eb-83d6-b60597a21a03.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (8) - Copy](https://user-images.githubusercontent.com/43153078/101232599-76b1a700-3680-11eb-910a-5f7a3277421b.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (9) - Copy](https://user-images.githubusercontent.com/43153078/101232601-76b1a700-3680-11eb-901c-7a20fe70ff6b.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (10) - Copy](https://user-images.githubusercontent.com/43153078/101232602-774a3d80-3680-11eb-9651-9e8e3ff23236.jpeg)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (11) - Copy](https://user-images.githubusercontent.com/43153078/101232603-774a3d80-3680-11eb-8765-46229961b846.jpeg)
 
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://salesbox-alpha.herokuapp.com/)
+![WhatsApp Image 2020-12-04 at 10 06 03 PM (1)](https://user-images.githubusercontent.com/43153078/101232590-744f4d00-3680-11eb-9eb0-c7f5f4d3b079.jpeg)
 
-[![CircleCI](https://circleci.com/gh/AlphaIETI/salesbox-FRONTEND.svg?style=svg)](https://circleci.com/gh/AlphaIETI/salesbox-FRONTEND)
-
-
-# Descripción
-<p align="center">
-  <img width="460" height="300" src=https://user-images.githubusercontent.com/43153078/90345669-38687d00-dfe8-11ea-98ca-5595bd61b55b.PNG>
-</p>
-
-
-Esta aplicación permitirá a diferentes almacenes de ropa agrupar sus promociones y productos, permitiendo al cliente filtrar los productos de su interés por categoría mostrando los diferentes descuentos que ofrecen las empresas de estos. Cuando el cliente realicé la compra, la tienda apartará el producto y lo dejará listo para ser despachado o recoger en tienda de acuerdo a lo que el cliente decida. A su vez por la compra de productos por medio de nuestra aplicación se generarán cupones de descuento para redimirlos en la misma plataforma. 
-
-# Modelo de Negocio 
-
-![ModeloCanvas](https://user-images.githubusercontent.com/48154086/92672510-7488b800-f2de-11ea-95a9-d402cb0fe2b1.PNG)
-
-
-# Diagrama de Componentes 
-
-![Diagrama de Componentes](https://user-images.githubusercontent.com/48154086/92671668-78b3d600-f2dc-11ea-9837-588672a56d0f.PNG)
-
-# Mockups
-
-<p align="center">
-  <img width="460" height="300" src=https://user-images.githubusercontent.com/43153078/90345739-e8d68100-dfe8-11ea-8414-a4dd440ecbae.PNG>
-</p>
-
-<p align="center">
-  <img width="460" height="300" src=https://user-images.githubusercontent.com/43153078/90345740-eaa04480-dfe8-11ea-8afe-4ae11921d8e6.PNG>
-</p>
-
-<p align="center">
-  <img width="460" height="300" src=https://user-images.githubusercontent.com/43153078/90345741-eb38db00-dfe8-11ea-9c23-1b21dc7e74f7.PNG>
-</p>
-
-<p align="center">
-  <img width="460" height="300" src=https://user-images.githubusercontent.com/43153078/90345742-ebd17180-dfe8-11ea-976d-321b46b8cf73.PNG>
-</p>
-
-<p align="center">
-  <img width="460" height="350" src=https://user-images.githubusercontent.com/43153078/90345743-ebd17180-dfe8-11ea-935e-68bfef58f3d4.PNG>
-</p>
 
 
 
